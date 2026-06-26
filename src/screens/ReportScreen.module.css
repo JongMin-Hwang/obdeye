@@ -1,0 +1,66 @@
+.screen { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+.header { padding: 16px 20px 12px; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
+.title { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; }
+.sub { font-size: 11px; color: var(--muted); margin-top: 1px; }
+.monthBtn { font-size: 11px; color: var(--accent); cursor: pointer; font-weight: 600; }
+.scroll { flex: 1; overflow-y: auto; padding-bottom: 80px; }
+
+.gradeCard {
+  margin: 0 20px 16px;
+  background: linear-gradient(135deg, rgba(123,97,255,0.15), rgba(0,198,255,0.1));
+  border: 1px solid rgba(123,97,255,0.25);
+  border-radius: 18px;
+  padding: 20px;
+}
+.gradeWeek { font-size: 11px; color: var(--muted); margin-bottom: 4px; }
+.gradeBig {
+  font-family: 'Space Grotesk', sans-serif; font-size: 36px; font-weight: 700;
+  background: linear-gradient(135deg, #7B61FF, #00C6FF);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.gradeRow { display: flex; align-items: baseline; gap: 8px; margin-top: 4px; }
+.gradeScore { font-size: 16px; font-weight: 700; }
+.gradeChange { font-size: 12px; color: var(--green); }
+
+.barChart {
+  margin: 0 20px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+}
+.chartTitle { font-size: 12px; color: var(--muted); margin-bottom: 14px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+.bars { display: flex; align-items: flex-end; gap: 8px; height: 100px; }
+.barCol { display: flex; flex-direction: column; align-items: center; gap: 4px; flex: 1; justify-content: flex-end; }
+.bar { width: 100%; border-radius: 4px 4px 0 0; min-height: 6px; transition: height 0.3s; }
+.barDay { font-size: 10px; color: var(--muted); }
+.barNum { font-size: 10px; color: var(--text); font-weight: 600; }
+
+.sectionTitle { padding: 0 20px 10px; font-size: 13px; font-weight: 600; color: var(--muted); letter-spacing: 0.5px; text-transform: uppercase; }
+
+.breakdownList { margin: 0 20px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+.breakdownItem { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--border); }
+.breakdownItem:last-child { border-bottom: none; }
+.bdIcon { font-size: 18px; }
+.bdLabel { flex: 1; font-size: 13px; font-weight: 500; }
+.bdBarWrap { width: 80px; height: 4px; background: var(--border); border-radius: 2px; overflow: hidden; }
+.bdBar { height: 100%; border-radius: 2px; transition: width 0.5s; opacity: 0.8; }
+.bdVal { font-size: 12px; font-weight: 700; width: 32px; text-align: right; }
+
+.coachCard {
+  margin: 0 20px 16px;
+  background: linear-gradient(135deg, rgba(123,97,255,0.1), rgba(0,198,255,0.05));
+  border: 1px solid rgba(123,97,255,0.2);
+  border-radius: 16px;
+  padding: 16px;
+}
+.coachTitle { font-size: 12px; color: var(--accent2); font-weight: 700; margin-bottom: 8px; }
+.coachText { font-size: 13px; color: var(--text); line-height: 1.6; }
+.coachRow { display: flex; gap: 8px; margin-top: 12px; padding-top: 12px; border-top: 1px solid var(--border); }
+.coachTag { flex: 1; border-radius: 10px; padding: 10px; text-align: center; border: 1px solid; }
+.coachTag.good { background: rgba(0,230,118,0.08); border-color: rgba(0,230,118,0.15); }
+.coachTag.bad { background: rgba(255,107,53,0.08); border-color: rgba(255,107,53,0.15); }
+.coachTagSub { font-size: 10px; color: var(--muted); }
+.coachTagVal { font-size: 12px; font-weight: 600; margin-top: 2px; }
+.coachTag.good .coachTagVal { color: var(--green); }
+.coachTag.bad .coachTagVal { color: var(--warn); }

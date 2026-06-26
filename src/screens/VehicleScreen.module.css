@@ -1,0 +1,59 @@
+.screen { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+.header { padding: 16px 20px 12px; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
+.title { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; }
+.sub { font-size: 11px; color: var(--muted); margin-top: 1px; }
+.connBadge { background: rgba(0,230,118,0.12); border: 1px solid rgba(0,230,118,0.25); border-radius: 20px; padding: 4px 12px; font-size: 11px; color: var(--green); font-weight: 600; }
+.scroll { flex: 1; overflow-y: auto; padding-bottom: 80px; }
+
+.vehicleCard {
+  margin: 0 20px 16px;
+  background: linear-gradient(135deg, var(--surface) 0%, #0D1829 100%);
+  border: 1px solid var(--border);
+  border-radius: 18px;
+  padding: 20px;
+  position: relative;
+  overflow: hidden;
+}
+.vehicleName { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; }
+.vehicleSub { font-size: 12px; color: var(--muted); margin-top: 2px; }
+.tags { display: flex; gap: 6px; margin-top: 12px; flex-wrap: wrap; }
+.tag { padding: 3px 10px; border-radius: 8px; font-size: 11px; font-weight: 600; }
+.tagGood { background: rgba(0,230,118,0.12); color: var(--green); }
+.tagWarn { background: rgba(255,214,0,0.12); color: var(--yellow); }
+.tagInfo { background: rgba(0,198,255,0.12); color: var(--accent); }
+.carEmoji { position: absolute; right: 16px; top: 50%; transform: translateY(-50%); font-size: 48px; opacity: 0.15; }
+
+.healthGrid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 10px; padding: 0 20px 16px; }
+.healthCard { background: var(--surface); border: 1px solid var(--border); border-radius: 14px; padding: 14px; text-align: center; }
+.healthLabel { font-size: 10px; color: var(--muted); margin-bottom: 6px; }
+.healthScore { font-family: 'Space Grotesk', sans-serif; font-size: 22px; font-weight: 700; }
+.healthStatus { font-size: 10px; margin-top: 2px; }
+
+.sectionTitle { padding: 0 20px 10px; font-size: 13px; font-weight: 600; color: var(--muted); letter-spacing: 0.5px; text-transform: uppercase; }
+
+.dtcItem {
+  margin: 0 20px 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 14px 16px;
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+}
+.dtcDot { width: 8px; height: 8px; border-radius: 50%; margin-top: 5px; flex-shrink: 0; }
+.dtcDot.red { background: var(--warn); box-shadow: 0 0 6px var(--warn); }
+.dtcDot.yellow { background: var(--yellow); box-shadow: 0 0 6px var(--yellow); }
+.dtcBody { flex: 1; }
+.dtcCode { font-family: 'Space Grotesk', sans-serif; font-size: 13px; font-weight: 600; color: var(--accent); }
+.dtcDesc { font-size: 13px; font-weight: 500; }
+.dtcDetail { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.dtcAction { padding: 4px 12px; background: var(--surface2); border: 1px solid var(--border); border-radius: 8px; font-size: 11px; color: var(--accent); cursor: pointer; flex-shrink: 0; font-weight: 600; align-self: center; }
+
+.predictList { margin: 0 20px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+.predictItem { padding: 14px 16px; display: flex; align-items: center; gap: 12px; }
+.predictIcon { font-size: 18px; }
+.predictBody { flex: 1; }
+.predictTitle { font-size: 13px; font-weight: 600; }
+.predictSub { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.predictDday { font-size: 12px; font-weight: 700; }

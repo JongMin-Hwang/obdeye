@@ -1,0 +1,96 @@
+.screen { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+
+.header {
+  padding: 16px 20px 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-shrink: 0;
+}
+.title { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; }
+.sub { font-size: 11px; color: var(--muted); margin-top: 1px; }
+
+.liveBadge {
+  display: flex; align-items: center; gap: 6px;
+  padding: 4px 12px;
+  background: rgba(0,230,118,0.12);
+  border: 1px solid rgba(0,230,118,0.3);
+  border-radius: 20px;
+  font-size: 11px; font-weight: 600; color: var(--green);
+}
+.liveDot {
+  width: 6px; height: 6px;
+  background: var(--green);
+  border-radius: 50%;
+  animation: blink 1.2s infinite;
+}
+
+.scroll { flex: 1; overflow-y: auto; padding-bottom: 80px; }
+
+.gaugeGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; padding: 0 20px 16px; }
+
+.gaugeCard {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+  text-align: center;
+}
+.gaugeLabel { font-size: 11px; color: var(--muted); margin-bottom: 10px; text-transform: uppercase; letter-spacing: 0.5px; }
+.gaugeVal { font-family: 'Space Grotesk', sans-serif; font-size: 28px; font-weight: 700; }
+.gaugeUnit { font-size: 11px; color: var(--muted); margin-left: 2px; font-weight: 400; font-family: 'Inter', sans-serif; }
+.barWrap { width: 100%; height: 4px; background: var(--border); border-radius: 2px; margin-top: 10px; overflow: hidden; }
+.bar { height: 100%; border-radius: 2px; transition: width 0.5s; opacity: 0.7; }
+
+.sectionTitle {
+  padding: 0 20px 10px;
+  font-size: 13px; font-weight: 600; color: var(--muted);
+  letter-spacing: 0.5px; text-transform: uppercase;
+}
+
+.panel {
+  margin: 0 20px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+}
+.panelTitle { font-size: 12px; color: var(--muted); margin-bottom: 12px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.5px; }
+
+.statusItem {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--border);
+}
+.statusItem:last-child { border-bottom: none; padding-bottom: 0; }
+
+.statusIcon {
+  width: 32px; height: 32px;
+  border-radius: 9px;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 15px; flex-shrink: 0;
+}
+.statusIcon.ok { background: rgba(0,230,118,0.12); }
+.statusIcon.warn { background: rgba(255,214,0,0.12); }
+
+.statusLabel { font-size: 13px; font-weight: 500; flex: 1; }
+.statusVal { font-size: 12px; font-weight: 600; }
+.statusVal.ok { color: var(--green); }
+.statusVal.warn { color: var(--yellow); }
+
+.scoreBar {
+  margin: 0 20px 16px;
+  background: linear-gradient(135deg, rgba(0,198,255,0.1), rgba(123,97,255,0.1));
+  border: 1px solid rgba(0,198,255,0.2);
+  border-radius: 16px;
+  padding: 16px;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.scoreSub { font-size: 11px; color: var(--muted); }
+.scoreBig {
+  font-family: 'Space Grotesk', sans-serif; font-size: 32px; font-weight: 700;
+  background: linear-gradient(135deg, var(--accent), var(--accent2));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+}
+.scoreSmall { font-size: 20px; font-weight: 700; color: var(--text); }
+.scoreChange { font-size: 11px; color: var(--green); }

@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+  --bg: #0A0D14;
+  --surface: #111620;
+  --surface2: #1A2030;
+  --border: #1E2A3A;
+  --accent: #00C6FF;
+  --accent2: #7B61FF;
+  --warn: #FF6B35;
+  --green: #00E676;
+  --yellow: #FFD600;
+  --text: #E8EDF5;
+  --muted: #6B7A99;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
+
+#root {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  background: #060810;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 0; }
+
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.2; }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
