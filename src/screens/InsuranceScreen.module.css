@@ -1,0 +1,106 @@
+.screen { display: flex; flex-direction: column; flex: 1; overflow: hidden; }
+.header { padding: 16px 20px 12px; display: flex; justify-content: space-between; align-items: center; flex-shrink: 0; }
+.title { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; }
+.sub { font-size: 11px; color: var(--muted); margin-top: 1px; }
+.connBadge { background: rgba(0,230,118,0.12); border: 1px solid rgba(0,230,118,0.25); border-radius: 20px; padding: 4px 12px; font-size: 11px; color: var(--green); font-weight: 600; }
+.scroll { flex: 1; overflow-y: auto; padding-bottom: 80px; }
+
+/* Hero Card */
+.heroCard {
+  margin: 0 20px 16px;
+  background: linear-gradient(135deg, rgba(0,198,255,0.12), rgba(123,97,255,0.1));
+  border: 1px solid rgba(0,198,255,0.25);
+  border-radius: 20px;
+  padding: 20px;
+}
+.heroTop { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 16px; }
+.heroLabel { font-size: 11px; color: var(--muted); margin-bottom: 6px; }
+.heroAmount {
+  font-family: 'Space Grotesk', sans-serif; font-size: 36px; font-weight: 700;
+  background: linear-gradient(135deg, #00E676, #00C6FF);
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent;
+  line-height: 1;
+}
+.heroWon { font-size: 20px; }
+.heroDiscount { font-size: 12px; color: var(--muted); margin-top: 6px; }
+.heroCircle {
+  width: 72px; height: 72px;
+  background: linear-gradient(135deg, rgba(0,198,255,0.2), rgba(123,97,255,0.2));
+  border: 1px solid rgba(0,198,255,0.3);
+  border-radius: 50%;
+  display: flex; flex-direction: column; align-items: center; justify-content: center;
+}
+.heroPercent { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; color: var(--accent); }
+.heroGrade { font-size: 10px; color: var(--yellow); font-weight: 600; }
+
+.premiumRow {
+  display: flex; align-items: center; gap: 12px;
+  background: rgba(0,0,0,0.2); border-radius: 12px; padding: 12px 16px;
+}
+.premiumItem { flex: 1; text-align: center; }
+.premiumLabel { font-size: 10px; color: var(--muted); margin-bottom: 4px; }
+.premiumVal { font-family: 'Space Grotesk', sans-serif; font-size: 16px; font-weight: 700; }
+.arrow { font-size: 16px; color: var(--muted); }
+
+/* Share */
+.shareSection {
+  margin: 0 20px 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  padding: 16px;
+}
+.shareDesc { font-size: 13px; color: var(--text); line-height: 1.6; margin-bottom: 12px; }
+.shareBtn {
+  width: 100%; padding: 13px;
+  background: linear-gradient(135deg, rgba(0,198,255,0.15), rgba(123,97,255,0.15));
+  border: 1px solid rgba(0,198,255,0.35);
+  border-radius: 12px;
+  color: var(--accent); font-size: 13px; font-weight: 600;
+  cursor: pointer; transition: all 0.2s;
+}
+.shareBtn:hover { background: linear-gradient(135deg, rgba(0,198,255,0.25), rgba(123,97,255,0.25)); }
+.shareBtn:disabled { opacity: 0.6; cursor: default; }
+.sharedDone {
+  text-align: center; padding: 12px;
+  background: rgba(0,230,118,0.08); border: 1px solid rgba(0,230,118,0.2);
+  border-radius: 12px; font-size: 13px; color: var(--green); font-weight: 600;
+}
+
+/* Section */
+.sectionTitle { padding: 0 20px 10px; font-size: 13px; font-weight: 600; color: var(--muted); letter-spacing: 0.5px; text-transform: uppercase; }
+
+/* Grade List */
+.gradeList { margin: 0 20px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+.gradeItem { display: flex; align-items: center; gap: 12px; padding: 13px 16px; border-bottom: 1px solid var(--border); transition: background 0.2s; }
+.gradeItem:last-child { border-bottom: none; }
+.gradeActive { background: rgba(255,214,0,0.05); }
+.gradeDot { width: 10px; height: 10px; border-radius: 50%; flex-shrink: 0; }
+.gradeBody { flex: 1; }
+.gradeName { font-size: 13px; font-weight: 600; display: flex; align-items: center; gap: 6px; }
+.gradeRange { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.gradeDiscount { font-family: 'Space Grotesk', sans-serif; font-size: 18px; font-weight: 700; }
+.currentTag { background: rgba(255,214,0,0.15); color: var(--yellow); font-size: 10px; font-weight: 600; padding: 2px 7px; border-radius: 6px; }
+
+/* Company List */
+.companyList { margin: 0 20px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+.companyItem { display: flex; align-items: center; gap: 12px; padding: 14px 16px; border-bottom: 1px solid var(--border); }
+.companyItem:last-child { border-bottom: none; }
+.companyLogo { font-size: 24px; }
+.companyBody { flex: 1; }
+.companyName { font-size: 13px; font-weight: 600; }
+.companyDiscount { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.connectedTag { background: rgba(0,230,118,0.12); color: var(--green); border: 1px solid rgba(0,230,118,0.25); border-radius: 8px; padding: 4px 10px; font-size: 11px; font-weight: 600; }
+.connectBtn { background: rgba(0,198,255,0.1); color: var(--accent); border: 1px solid rgba(0,198,255,0.25); border-radius: 8px; padding: 4px 10px; font-size: 11px; font-weight: 600; cursor: pointer; }
+
+/* History */
+.historyList { margin: 0 20px 16px; background: var(--surface); border: 1px solid var(--border); border-radius: 16px; overflow: hidden; }
+.historyItem { display: flex; align-items: center; gap: 12px; padding: 13px 16px; border-bottom: 1px solid var(--border); }
+.historyItem:last-child { border-bottom: none; }
+.historyDate { font-size: 11px; color: var(--muted); width: 70px; flex-shrink: 0; }
+.historyBody { flex: 1; }
+.historyCompany { font-size: 13px; font-weight: 600; }
+.historyScore { font-size: 11px; color: var(--muted); margin-top: 2px; }
+.historyRight { text-align: right; }
+.historyStatus { font-size: 11px; color: var(--green); }
+.historySaved { font-family: 'Space Grotesk', sans-serif; font-size: 14px; font-weight: 700; color: var(--green); margin-top: 2px; }

@@ -89,7 +89,7 @@ export default function HomeScreen({ goScreen }) {
             { icon: '📡', title: '실시간 모니터링', sub: 'OBD + 졸음 감지', badge: 'LIVE', badgeColor: 'green', accent: 'blue', screen: 'monitor' },
             { icon: '📊', title: '운전 리포트', sub: '주간 습관 분석', badge: '이번 주', badgeColor: 'purple', accent: 'purple', screen: 'report' },
             { icon: '🚗', title: '차량 상태', sub: '고장 예측 · DTC', badge: '1건 주의', badgeColor: 'warn', accent: 'orange', screen: 'vehicle' },
-            { icon: '🏆', title: '보험 연동', sub: 'UBI 점수 공유', badge: '-12% 할인', badgeColor: 'green', accent: 'green', screen: null },
+            { icon: '🏆', title: '보험 연동', sub: 'UBI 점수 공유', badge: '-12% 할인', badgeColor: 'green', accent: 'green', screen: 'insurance' },
           ].map((f) => (
             <div
               key={f.title}
