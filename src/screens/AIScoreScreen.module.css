@@ -1,0 +1,61 @@
+.screen { display:flex; flex-direction:column; flex:1; overflow:hidden; }
+.header { padding:16px 20px 12px; display:flex; justify-content:space-between; align-items:center; flex-shrink:0; }
+.title { font-family:'Space Grotesk',sans-serif; font-size:18px; font-weight:700; }
+.sub { font-size:11px; color:var(--muted); margin-top:1px; }
+.finalBadge {
+  background:linear-gradient(135deg,rgba(0,198,255,0.15),rgba(123,97,255,0.15));
+  border:1px solid rgba(0,198,255,0.3); border-radius:20px;
+  padding:4px 14px; font-size:13px; font-weight:700; color:var(--accent);
+}
+.scroll { flex:1; overflow-y:auto; padding-bottom:80px; }
+
+.formulaCard {
+  margin:0 20px 16px;
+  background:linear-gradient(135deg,rgba(123,97,255,0.1),rgba(0,198,255,0.07));
+  border:1px solid rgba(123,97,255,0.2); border-radius:18px; padding:18px;
+}
+.formulaTitle { font-size:13px; font-weight:700; color:var(--accent2); margin-bottom:8px; }
+.formulaDesc { font-size:12px; color:var(--muted); line-height:1.6; margin-bottom:14px; }
+.formulaEq { display:flex; align-items:baseline; gap:4px; }
+.eqBase { font-family:'Space Grotesk',sans-serif; font-size:28px; font-weight:700; color:var(--text); }
+.eqOp { font-size:16px; color:var(--muted); }
+.eqResult {
+  font-family:'Space Grotesk',sans-serif; font-size:32px; font-weight:700;
+  background:linear-gradient(135deg,var(--accent),var(--accent2));
+  -webkit-background-clip:text; -webkit-text-fill-color:transparent;
+}
+
+.sectionTitle { padding:0 20px 10px; font-size:13px; font-weight:600; color:var(--muted); letter-spacing:0.5px; text-transform:uppercase; }
+
+.factorList { margin:0 20px 16px; background:var(--surface); border:1px solid var(--border); border-radius:16px; overflow:hidden; }
+.factorItem {
+  display:flex; justify-content:space-between; align-items:center;
+  padding:13px 16px; border-bottom:1px solid var(--border);
+}
+.factorItem:last-child { border-bottom:none; }
+.factorLeft { display:flex; align-items:center; gap:10px; flex:1; }
+.factorIcon { font-size:20px; }
+.factorLabel { font-size:13px; font-weight:600; display:flex; align-items:center; gap:6px; }
+.factorCount { font-size:11px; color:var(--muted); font-weight:400; }
+.factorDesc { font-size:11px; color:var(--muted); margin-top:2px; }
+.factorRight { text-align:right; }
+.factorPenalty { font-family:'Space Grotesk',sans-serif; font-size:15px; font-weight:700; }
+.factorScore { font-size:11px; color:var(--muted); margin-top:1px; }
+
+.modelCard { margin:0 20px 16px; background:var(--surface); border:1px solid var(--border); border-radius:16px; padding:16px; }
+.modelTitle { font-size:13px; font-weight:600; margin-bottom:12px; }
+.modelGrid { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+.modelItem { background:var(--surface2); border-radius:10px; padding:10px; }
+.modelLabel { font-size:10px; color:var(--muted); margin-bottom:4px; }
+.modelVal { font-size:12px; font-weight:600; }
+
+.tipList { margin:0 20px 16px; display:flex; flex-direction:column; gap:8px; }
+.tipItem {
+  background:var(--surface); border:1px solid var(--border);
+  border-radius:14px; padding:14px 16px;
+  display:flex; align-items:center; gap:10px;
+}
+.tipBullet { font-size:18px; flex-shrink:0; }
+.tipBody { flex:1; }
+.tipText { font-size:13px; color:var(--text); line-height:1.5; }
+.tipGain { font-size:13px; font-weight:700; color:var(--green); flex-shrink:0; }

@@ -94,3 +94,40 @@
 }
 .scoreSmall { font-size: 20px; font-weight: 700; color: var(--text); }
 .scoreChange { font-size: 11px; color: var(--green); }
+
+.alertPopup {
+  position:absolute; top:60px; left:16px; right:16px; z-index:200;
+  border-radius:16px; padding:14px 16px;
+  display:flex; align-items:center; gap:12px;
+  animation:slideDown 0.3s ease;
+  border:1px solid;
+}
+@keyframes slideDown { from{transform:translateY(-20px);opacity:0} to{transform:translateY(0);opacity:1} }
+.alertPopup.danger { background:rgba(255,107,53,0.15); border-color:rgba(255,107,53,0.5); }
+.alertPopup.warn { background:rgba(255,214,0,0.12); border-color:rgba(255,214,0,0.4); }
+.alertPopupIcon { font-size:26px; flex-shrink:0; animation:pulse 0.5s infinite; }
+.alertPopupBody { flex:1; }
+.alertPopupTitle { font-size:14px; font-weight:700; color:var(--warn); }
+.alertPopup.warn .alertPopupTitle { color:var(--yellow); }
+.alertPopupDesc { font-size:12px; color:var(--muted); margin-top:2px; }
+.alertPopupClose { font-size:14px; color:var(--muted); cursor:pointer; padding:4px; }
+
+.demoBar {
+  margin:0 20px 14px;
+  background:rgba(123,97,255,0.08); border:1px solid rgba(123,97,255,0.2);
+  border-radius:12px; padding:10px 14px;
+  display:flex; align-items:center; gap:8px;
+}
+.demoLabel { font-size:11px; color:var(--accent2); font-weight:600; flex-shrink:0; }
+.demoBtn {
+  flex:1; padding:7px 10px;
+  background:rgba(255,107,53,0.12); border:1px solid rgba(255,107,53,0.3);
+  border-radius:8px; color:var(--warn); font-size:11px; font-weight:600;
+  cursor:pointer;
+}
+.demoBtn2 {
+  flex:1; padding:7px 10px;
+  background:rgba(0,198,255,0.1); border:1px solid rgba(0,198,255,0.25);
+  border-radius:8px; color:var(--accent); font-size:11px; font-weight:600;
+  cursor:pointer;
+}

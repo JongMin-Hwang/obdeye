@@ -1,9 +1,11 @@
 import { useState } from 'react';
+import OnboardingScreen from './screens/OnboardingScreen';
 import HomeScreen from './screens/HomeScreen';
 import MonitorScreen from './screens/MonitorScreen';
 import ReportScreen from './screens/ReportScreen';
 import VehicleScreen from './screens/VehicleScreen';
 import InsuranceScreen from './screens/InsuranceScreen';
+import AIScoreScreen from './screens/AIScoreScreen';
 import styles from './App.module.css';
 
 const NAV = [
@@ -14,8 +16,10 @@ const NAV = [
   { id: 'insurance', icon: '🛡️', label: '보험' },
 ];
 
+const NO_NAV = ['onboarding', 'aiscore'];
+
 export default function App() {
-  const [screen, setScreen] = useState('home');
+  const [screen, setScreen] = useState('onboarding');
 
   return (
     <div className={styles.app}>
@@ -24,25 +28,29 @@ export default function App() {
         <span>📶 🔋</span>
       </div>
       <div className={styles.content}>
-        {screen === 'home' && <HomeScreen goScreen={setScreen} />}
-        {screen === 'monitor' && <MonitorScreen />}
-        {screen === 'report' && <ReportScreen />}
-        {screen === 'vehicle' && <VehicleScreen />}
-        {screen === 'insurance' && <InsuranceScreen />}
+        {screen === 'onboarding' && <OnboardingScreen goScreen={setScreen} />}
+        {screen === 'home'       && <HomeScreen goScreen={setScreen} />}
+        {screen === 'monitor'    && <MonitorScreen goScreen={setScreen} />}
+        {screen === 'report'     && <ReportScreen />}
+        {screen === 'vehicle'    && <VehicleScreen />}
+        {screen === 'insurance'  && <InsuranceScreen />}
+        {screen === 'aiscore'    && <AIScoreScreen />}
       </div>
-      <nav className={styles.nav}>
-        {NAV.map((n) => (
-          <button
-            key={n.id}
-            className={`${styles.navItem} ${screen === n.id ? styles.active : ''}`}
-            onClick={() => setScreen(n.id)}
-          >
-            <div className={styles.navIndicator} />
-            <span className={styles.navIcon}>{n.icon}</span>
-            <span className={styles.navLabel}>{n.label}</span>
-          </button>
-        ))}
-      </nav>
+      {!NO_NAV.includes(screen) && (
+        <nav className={styles.nav}>
+          {NAV.map((n) => (
+            <button
+              key={n.id}
+              className={`${styles.navItem} ${screen === n.id ? styles.active : ''}`}
+              onClick={() => setScreen(n.id)}
+            >
+              <div className={styles.navIndicator} />
+              <span className={styles.navIcon}>{n.icon}</span>
+              <span className={styles.navLabel}>{n.label}</span>
+            </button>
+          ))}
+        </nav>
+      )}
     </div>
   );
 }

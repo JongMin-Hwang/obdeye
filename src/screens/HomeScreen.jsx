@@ -46,6 +46,10 @@ export default function HomeScreen({ goScreen }) {
             </div>
           </div>
           <div className={styles.gradeTag}>🥇 GOLD 등급</div>
+          <div
+            style={{fontSize:'12px',color:'var(--accent)',marginTop:'10px',cursor:'pointer'}}
+            onClick={() => goScreen('aiscore')}
+          >AI 점수 산출 근거 보기 →</div>
         </div>
 
         {/* Stats */}
